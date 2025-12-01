@@ -54,8 +54,8 @@ test_transform = transforms.Compose([
     transforms.ToTensor()
 ])
 
-train_dataset = ImageFolder('C:/Users/gsr20/Desktop/GPU/data/train', transform=train_transform)
-test_dataset = ImageFolder('C:/Users/gsr20/Desktop/GPU/data/test', transform=test_transform)
+train_dataset = ImageFolder('/data/train', transform=train_transform)
+test_dataset = ImageFolder('/data/test', transform=test_transform)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
@@ -174,3 +174,4 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+
