@@ -1,4 +1,7 @@
-Data can be taken in the form of images 
-and there should be two folders i.e train and test
-and each folder should have star and non star folder with respective images
+### Run with Docker
 
+```bash
+docker build -t star-classifier .
+docker run --gpus all \
+  -v /path/to/your/data:/app/data \
+  star-classifier python gpu.py --data_root /app/data
