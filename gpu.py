@@ -59,8 +59,8 @@ test_transform = transforms.Compose([
 ])
 
 # Dataset paths
-train_dataset = ImageFolder(root='C:/Users/gsr20/Desktop/GPU/data/train', transform=train_transform)
-test_dataset = ImageFolder(root='C:/Users/gsr20/Desktop/GPU/data/test', transform=test_transform)
+train_dataset = ImageFolder(root='/data/train', transform=train_transform)
+test_dataset = ImageFolder(root='/data/test', transform=test_transform)
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
@@ -181,3 +181,4 @@ plt.grid(True)
 
 plt.tight_layout()
 plt.show()
+
